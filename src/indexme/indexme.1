@@ -1,0 +1,64 @@
+.TH INDEXME 1 "Saturday April 8 2000" ""
+.SH NAME
+indexme \- link several images or documents into a HTML index
+.SH SYNOPSIS
+.B indexme
+[-r recursive ] [-g create a HTML index] [-f force overwriting of existing indexme.html] 
+.SH DESCRIPTION
+.B indexme 
+is a small Perl program for linking several images or documents
+into a HTML index for viewing and easy overview.
+The reason I wrote this program was that I had downloaded some gif archives
+and its way too annoying being forced to open every single file for viewing.
+
+Currently, 
+.B indexme
+only supports simple file linking + graphics <img> included file links,
+but I might keep working on it. (because it's fun, and it's a good way
+to improve my skills.)
+The way this version handles command-line switches is somewhat primitive.
+You can't for example do indexme -rgf, but have to write it as -r -g -f.
+I'll fix this soon using GetOpt, but for now this is how it works.
+If you would like to modify the look of the resulting indexme.html file,
+just modify the HTML contense of the @htmlhead and @htmlend spaces in the program.
+It's quite simple.
+
+.SH OPTIONS
+.TP
+The following options can be used:
+.BR
+.Ds
+ -r  index recursively
+ -g  creates an HTML index file
+ -f  force overwriting of existing indexme.html
+.De
+.PP
+.B
+Examples:
+.Ds
+.P
+Index all gif files in current directory
+.P
+.BR
+.B
+indexme -r -g '*.gif'
+.De
+
+
+Index all html files in your system
+.P
+.BR
+.B
+cd /; indexme -r '*.html'
+.De
+
+.SH AUTHOR
+Tobias Ekbom
+.B <kybernetos@email.com>
+
+.SH ACKNOWLEDGMENTS
+This manual page was written by 
+.P
+Carl Johan Madestrand 
+.B
+<cj@vallcom.net>

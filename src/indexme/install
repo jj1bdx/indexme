@@ -1,0 +1,6 @@
+echo "Installing indexme into /usr/local/bin and manpage"
+install -c indexme /usr/local/bin
+echo "Compressing manpage."
+gzip indexme.1
+install -c indexme.1.gz /usr/local/man/man1
+echo "Done"
