@@ -13,3 +13,7 @@
 * distfiles/ - original tar file
 * indexme/ - FreeBSD Port directory
 * src/ - source expanded from the distfiles tar archive
+
+## How to use
+
+* `src/indexme` is the shell script. Copy the script to a directory in the execution path.
